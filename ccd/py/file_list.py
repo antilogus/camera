@@ -231,6 +231,7 @@ class File_List :
         yf=yf_r+yoff
         yl=yl_r-yoff
         ystep=int((yl-yf)/ny)
+        yl=yf+ny*ystep
         # list of File to process 
         file_to_consider=[i for i,j in enumerate(self.selection) if j==selection ] 
         nread=len(file_to_consider)
@@ -262,6 +263,7 @@ class File_List :
                     xf=xf_r+xoff
                     xl=xl_r-xoff
                     xstep=int((xl-xf)/nx)
+                    xl=xf+nx*xstep
                     #
                     ix=0
                     iy=0
